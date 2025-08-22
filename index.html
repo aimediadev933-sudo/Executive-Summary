@@ -121,30 +121,35 @@
         }
 
         .footer-logos {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 50px;
-            background: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            min-height: 150px;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
         }
 
         .logo-eu {
-            height: 120px;
-            max-width: 250px;
+            height: 60px;
+            max-width: 120px;
             object-fit: contain;
         }
 
         .logo-asia-connect {
-            height: 100px;
-            max-width: 350px;
+            height: 50px;
+            max-width: 150px;
             object-fit: contain;
         }
 
         .logo-tein {
-            height: 100px;
-            max-width: 300px;
+            height: 50px;
+            max-width: 130px;
             object-fit: contain;
         }
 
@@ -210,8 +215,6 @@
         </div>
 
         <div class="footer-logos">
-            <div class="page-number">Page<br><strong>03</strong></div>
-            
             <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/eu-logo.png" 
                  alt="European Union" 
                  class="logo-eu"
