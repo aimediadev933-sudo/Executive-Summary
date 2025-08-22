@@ -3,247 +3,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asia@Connect - Digital Research Network</title>
+    <title>Asia@Connect - Executive Summary</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
-        .header {
-            background: linear-gradient(90deg, #2c5282 0%, #e53e3e 30%, #fd8b00 60%, #9f7aea 100%);
-            height: 8px;
+        
+        .header-stripe {
+            background: linear-gradient(90deg, #003d82 0%, #e91e63 50%, #ff9800 100%);
+            height: 6px;
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .main-content {
-            background: #fdf8f5;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding: 40px;
-        }
-
-        .left-column h1 {
-            color: #2d5a87;
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-
-        .quote {
-            font-style: italic;
-            font-size: 1.1em;
-            color: #666;
-            margin: 20px 0;
             padding: 20px;
-            background: rgba(255,255,255,0.5);
-            border-left: 4px solid #e53e3e;
-            border-radius: 5px;
         }
-
-        .quote-author {
-            text-align: right;
-            font-size: 0.9em;
-            color: #888;
-            margin-top: 10px;
+        
+        .logo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-
-        .description {
-            text-align: justify;
-            margin: 20px 0;
-            line-height: 1.8;
+        
+        .asia-connect-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-
-        .section-title {
-            color: #2d5a87;
-            font-size: 2em;
-            margin: 30px 0 20px 0;
-            border-bottom: 2px solid #e53e3e;
-            padding-bottom: 10px;
+        
+        .brand-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #e91e63 0%, #ff9800 30%, #4caf50 60%, #2196f3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
         }
-
-        .objectives {
-            margin: 20px 0;
+        
+        .brand-circle::before {
+            content: '@';
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
-
-        .objectives ol {
-            padding-left: 20px;
+        
+        .brand-text {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
         }
-
-        .objectives li {
-            margin: 15px 0;
-            padding: 10px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 5px;
+        
+        .asia-part {
+            color: #ff9800;
         }
-
-        .network-map {
+        
+        .connect-part {
+            color: #1a237e;
+        }
+        
+        .partner-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .eu-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .eu-flag {
+            width: 75px;
+            height: 50px;
+            background: #003d82;
+            border-radius: 3px;
             position: relative;
-            background: #f0f4f8;
-            border-radius: 15px;
-            padding: 30px;
-            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 61, 130, 0.3);
+        }
+        
+        .eu-stars-container {
+            position: relative;
+            width: 60px;
+            height: 40px;
+        }
+        
+        .eu-star {
+            position: absolute;
+            color: #ffdd00;
+            font-size: 6px;
+            transform-origin: center;
+        }
+        
+        .eu-star:nth-child(1) { top: 2px; left: 50%; transform: translateX(-50%); }
+        .eu-star:nth-child(2) { top: 8px; right: 12px; }
+        .eu-star:nth-child(3) { top: 18px; right: 5px; }
+        .eu-star:nth-child(4) { bottom: 8px; right: 12px; }
+        .eu-star:nth-child(5) { bottom: 2px; left: 50%; transform: translateX(-50%); }
+        .eu-star:nth-child(6) { bottom: 8px; left: 12px; }
+        .eu-star:nth-child(7) { top: 18px; left: 5px; }
+        .eu-star:nth-child(8) { top: 8px; left: 12px; }
+        .eu-star:nth-child(9) { top: 16px; left: 20px; }
+        .eu-star:nth-child(10) { top: 16px; right: 20px; }
+        .eu-star:nth-child(11) { bottom: 16px; left: 20px; }
+        .eu-star:nth-child(12) { bottom: 16px; right: 20px; }
+        
+        .eu-label {
+            font-size: 11px;
+            color: #003d82;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .tein-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .tein-logo {
+            position: relative;
+            width: 80px;
+            height: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
-        .map-container {
-            position: relative;
-            width: 100%;
-            height: 600px;
-            background-image: url('https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/1.png');
-            background-size: 90%;
-            background-repeat: no-repeat;
-            background-position: center;
+        
+        .tein-splash {
+            position: absolute;
+            top: 0;
+            right: 0;
         }
-
-        .footer-logos {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        
+        .splash-dot {
+            position: absolute;
+            border-radius: 50%;
+        }
+        
+        .dot-1 { width: 12px; height: 12px; background: #7b1fa2; top: 0; right: 0; }
+        .dot-2 { width: 8px; height: 8px; background: #e91e63; top: 5px; right: 15px; }
+        .dot-3 { width: 6px; height: 6px; background: #f06292; top: 8px; right: 25px; }
+        .dot-4 { width: 10px; height: 10px; background: #ab47bc; top: 15px; right: 5px; }
+        .dot-5 { width: 4px; height: 4px; background: #ba68c8; top: 20px; right: 20px; }
+        
+        .tein-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #7b1fa2;
+            letter-spacing: 1px;
+        }
+        
+        .tein-subtitle {
+            font-size: 9px;
+            color: #7b1fa2;
+            letter-spacing: 3px;
+            font-weight: 500;
+        }
+        
+        .main-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .executive-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            color: #1a237e;
+            margin-bottom: 25px;
+            font-weight: 300;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            font-size: 16px;
+            color: #555;
+            margin: 25px 0;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-left: 4px solid #ff9800;
+            border-radius: 0 8px 8px 0;
         }
-
-        .logo-eu {
-            height: 60px;
-            max-width: 120px;
-            object-fit: contain;
+        
+        .testimonial-credit {
+            font-weight: 600;
+            color: #1a237e;
+            margin-top: 12px;
+            font-style: normal;
         }
-
-        .logo-asia-connect {
-            height: 50px;
-            max-width: 150px;
-            object-fit: contain;
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 30px;
         }
-
-        .logo-tein {
-            height: 50px;
-            max-width: 130px;
-            object-fit: contain;
+        
+        .network-visualization {
+            background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+            border-radius: 12px;
+            padding: 25px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-
-        .page-number {
-            color: #666;
-            font-size: 14px;
+        
+        .network-legend {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 10px;
+            z-index: 10;
         }
-
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 3px;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 2px;
+            border-radius: 1px;
+        }
+        
+        .country-node {
+            position: absolute;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            min-width: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .connection-path {
+            position: absolute;
+            height: 3px;
+            border-radius: 1.5px;
+            z-index: 1;
+        }
+        
+        /* Network positioning based on the diagram */
+        .node-eu { top: 30px; left: 40px; background: #e91e63; width: 35px; }
+        .node-mn { top: 20px; right: 20px; background: #ff9800; }
+        .node-cn { top: 45px; right: 35px; background: #ff9800; }
+        .node-pk { top: 90px; left: 90px; background: #2196f3; }
+        .node-np { top: 110px; left: 130px; background: #00bcd4; }
+        .node-in { top: 130px; left: 110px; background: #4caf50; }
+        .node-bt { top: 100px; left: 180px; background: #ff9800; }
+        .node-bd { top: 150px; left: 165px; background: #9c27b0; }
+        .node-lk { top: 190px; left: 130px; background: #4caf50; }
+        .node-th { top: 190px; left: 210px; background: #795548; }
+        .node-my { top: 210px; left: 170px; background: #4caf50; }
+        .node-la { top: 170px; left: 230px; background: #795548; }
+        .node-kh { top: 190px; right: 90px; background: #9e9e9e; }
+        .node-sg { bottom: 50px; left: 190px; background: #f44336; }
+        
+        /* Connection paths */
+        .path-eu-main { top: 45px; left: 75px; width: 200px; background: linear-gradient(90deg, #e91e63, #ff9800); }
+        .path-main-asia { top: 130px; left: 140px; width: 150px; background: linear-gradient(90deg, #4caf50, #2196f3); }
+        .path-vertical { top: 100px; left: 150px; width: 3px; height: 100px; background: linear-gradient(180deg, #2196f3, #4caf50); }
+        
+        .program-info {
+            margin-top: 20px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #7b1fa2, #e91e63);
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
+        }
+        
+        .metric-value {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        .vision-section {
+            margin-top: 25px;
+        }
+        
+        .section-heading {
+            font-size: 22px;
+            color: #1a237e;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives-list li {
+            margin: 12px 0;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-left: 4px solid #7b1fa2;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .objective-number {
+            font-weight: bold;
+            color: #7b1fa2;
+        }
+        
         @media (max-width: 768px) {
-            .content-wrapper {
+            .content-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 20px;
             }
             
-            .left-column h1 {
-                font-size: 2em;
+            .logo-header {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .brand-text {
+                font-size: 28px;
+            }
+            
+            .partner-section {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .network-visualization {
+                height: 250px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header"></div>
+    <div class="header-stripe"></div>
     
-    <div class="main-content">
-        <div class="content-wrapper">
-            <div class="left-column">
-                <h1>Executive<br>Summary</h1>
-                
-                <div class="quote">
-                    "We used to wait weeks for access to essential research articles. Today, with just a click, we connect with scientists across Asia and Europe in real time."
-                    <div class="quote-author">— Project Beneficiary, Kathmandu University, Nepal</div>
-                </div>
-
-                <div class="description">
-                    Asia@Connect is a 9-year EU co-funded programme (2016–2025) that connected 24 Asian countries to Europe's research and education network. It paired a high-capacity backbone with targeted capacity-building and 95 innovation sub-grants, reaching 17,000+ institutions and 70+ million end users. During the programme, regional backbone capacity increased from 107 Gbps to 926 Gbps, making cross-border collaboration routine rather than rare. The programme's core idea was simple and powerful: infrastructure only delivers value when people have the skills and services to use it. Asia@Connect therefore invested in all three, creating lasting change in how Asia learns, researches, and solves public challenges together.
-                </div>
-
-                <h2 class="section-title">Vision and Objectives</h2>
-                
-                <div class="description">
-                    The programme's vision was to build an inclusive, digitally capable research and education community across Asia. That meant closing persistent gaps in connectivity, skills, and access to digital services, especially for Least Developed Countries (LDCs) and Lower-Middle Income Countries (LMICs). Three objectives guided the work:
-                </div>
-
-                <div class="objectives">
-                    <ol>
-                        <li><strong>Operate a world-class transcontinental network</strong> for research and education that reliably links Asia with Europe.</li>
-                        <li><strong>Strengthen human and institutional capacity</strong>, with priority support to developing NRENs that need skills, tools, and operating practices to thrive.</li>
-                        <li><strong>Support applications and services</strong> with public benefit, aligned with national needs and the UN Sustainable Development Goals (SDGs).</li>
-                    </ol>
-                </div>
-
-                <div class="description">
-                    These objectives were pursued through regional cooperation, shared standards, and a community-driven model that encouraged local leadership and South-South collaboration.
+    <div class="container">
+        <div class="logo-header">
+            <div class="asia-connect-brand">
+                <div class="brand-circle"></div>
+                <div class="brand-text">
+                    <span class="asia-part">Asi@</span><span class="connect-part">Connect</span>
                 </div>
             </div>
-
-            <div class="network-map">
-                <div class="map-container">
-                    <!-- Network map image will be displayed as background -->
+            
+            <div class="partner-section">
+                <div class="eu-brand">
+                    <div class="eu-flag">
+                        <div class="eu-stars-container">
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                            <div class="eu-star">★</div>
+                        </div>
+                    </div>
+                    <div class="eu-label">European Union</div>
+                </div>
+                
+                <div class="tein-brand">
+                    <div class="tein-logo">
+                        <div class="tein-splash">
+                            <div class="splash-dot dot-1"></div>
+                            <div class="splash-dot dot-2"></div>
+                            <div class="splash-dot dot-3"></div>
+                            <div class="splash-dot dot-4"></div>
+                            <div class="splash-dot dot-5"></div>
+                        </div>
+                    </div>
+                    <div class="tein-title">TEIN CC</div>
+                    <div class="tein-subtitle">COOPERATION CENTER</div>
                 </div>
             </div>
         </div>
-
-        <div class="footer-logos">
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/eu-logo.png" 
-                 alt="European Union" 
-                 class="logo-eu"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-            <div class="logo-fallback eu" style="display: none;">European Union</div>
+        
+        <div class="main-panel">
+            <div class="executive-header">
+                <h1 class="page-title">Executive Summary</h1>
+                
+                <div class="testimonial">
+                    "We used to wait weeks for access to essential research articles. Today, with just a click, we connect with scientists across Asia and Europe in real time."
+                    <div class="testimonial-credit">— Project Beneficiary, Kathmandu University, Nepal</div>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">24</div>
+                        <div class="metric-label">Asian Countries</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">17,000+</div>
+                        <div class="metric-label">Institutions</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">70M+</div>
+                        <div class="metric-label">End Users</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">928</div>
+                        <div class="metric-label">Gbps Capacity</div>
+                    </div>
+                </div>
+                
+                <div class="program-info">
+                    <p>Asia@Connect is a 9-year EU co-funded programme (2016-2025) that connected 24 Asian countries to Europe's research and education networks. It paired a high-capacity backbone with targeted capacity-building and 95 innovation sub-grants, reaching 17,000+ institutions and 70+ million end users. During the programme, regional backbone capacity rose from 107 Gbps to 928 Gbps, making cross-border collaboration routine rather than rare. The programme's core idea was simple and powerful: infrastructure only delivers value when people have the skills and services to use it. Asia@Connect therefore invested in all three, creating lasting change in how Asia learns, researches, and solves public challenges together.</p>
+                </div>
+            </div>
             
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/asia-connect-logo.png" 
-                 alt="Asia@Connect" 
-                 class="logo-asia-connect"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-            <div class="logo-fallback asia" style="display: none;">Asia@Connect</div>
-            
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/tein-logo.png" 
-                 alt="TEIN Cooperation Center" 
-                 class="logo-tein"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-            <div class="logo-fallback tein" style="display: none;">TEIN CC</div>
+            <div class="content-grid">
+                <div class="vision-section">
+                    <h2 class="section-heading">Vision and Objectives</h2>
+                    
+                    <p>The programme's vision was to build an inclusive, digitally capable research and education community across Asia. That meant closing persistent gaps in connectivity, skills, and access to digital services, especially for Least Developed Countries (LDCs) and Lower-Middle Income Countries (LMICs). Three objectives guided the work:</p>
+                    
+                    <ol class="objectives-list">
+                        <li><span class="objective-number">1.</span> Operate a world-class transcontinental network for research and education that reliably links Asia with Europe.</li>
+                        <li><span class="objective-number">2.</span> Strengthen human and institutional capacity, with priority support to developing NRENs that need skills, tools, and operating practices to thrive.</li>
+                        <li><span class="objective-number">3.</span> Support applications and services with public benefit, aligned with national needs and the UN Sustainable Development Goals (SDGs).</li>
+                    </ol>
+                    
+                    <p>These objectives were pursued through regional cooperation, shared standards, and a community-driven model that encouraged local leadership and South-South collaboration.</p>
+                </div>
+                
+                <div class="network-visualization">
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #e91e63;"></div>
+                            <span>Spectrum</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #7b1fa2;"></div>
+                            <span>100 Gbps</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #ff9800;"></div>
+                            <span>10 Gbps</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #4caf50;"></div>
+                            <span>2.5 Gbps</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #2196f3;"></div>
+                            <span>1 Gbps</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Network connections -->
+                    <div class="connection-path path-eu-main"></div>
+                    <div class="connection-path path-main-asia"></div>
+                    <div class="connection-path path-vertical"></div>
+                    
+                    <!-- Country nodes based on the network diagram -->
+                    <div class="country-node node-eu">EU</div>
+                    <div class="country-node node-mn">MN</div>
+                    <div class="country-node node-cn">CN</div>
+                    <div class="country-node node-pk">PK</div>
+                    <div class="country-node node-np">NP</div>
+                    <div class="country-node node-in">IN</div>
+                    <div class="country-node node-bt">BT</div>
+                    <div class="country-node node-bd">BD</div>
+                    <div class="country-node node-lk">LK</div>
+                    <div class="country-node node-th">TH</div>
+                    <div class="country-node node-my">MY</div>
+                    <div class="country-node node-la">LA</div>
+                    <div class="country-node node-kh">KH</div>
+                    <div class="country-node node-sg">SG</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Add smooth scrolling animation on page load
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 1s ease-in-out';
-                document.body.style.opacity = '1';
-            }, 100);
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const countryNodes = document.querySelectorAll('.country-node');
+            const metricCards = document.querySelectorAll('.metric-card');
+            
+            // Hover effects for network nodes
+            countryNodes.forEach(node => {
+                node.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.15)';
+                    this.style.transition = 'transform 0.3s ease';
+                    this.style.zIndex = '10';
+                });
+                
+                node.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.zIndex = '2';
+                });
+            });
+            
+            // Staggered animation for metric cards
+            metricCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+            
+            // Pulse animation for connection paths
+            const connectionPaths = document.querySelectorAll('.connection-path');
+            connectionPaths.forEach(path => {
+                path.style.animation = 'pulse 3s ease-in-out infinite';
+            });
         });
+        
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { opacity: 0.7; }
+                50% { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
