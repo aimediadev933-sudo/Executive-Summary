@@ -44,6 +44,13 @@
             gap: 15px;
         }
         
+        .asia-connect-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Fallback styling if logo doesn't load */
         .brand-circle {
             width: 60px;
             height: 60px;
@@ -89,6 +96,13 @@
             gap: 8px;
         }
         
+        .eu-logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Fallback EU flag styling */
         .eu-flag {
             width: 75px;
             height: 50px;
@@ -141,6 +155,13 @@
             gap: 5px;
         }
         
+        .tein-logo-img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Fallback TEIN styling */
         .tein-logo {
             position: relative;
             width: 80px;
@@ -393,7 +414,12 @@
     <div class="container">
         <div class="logo-header">
             <div class="asia-connect-brand">
-                <div class="brand-circle"></div>
+                <!-- Try to load the actual Asia@Connect logo -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZTkxZTYzO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmOTgwMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0Y2FmNTA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzIxOTZmMztzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz4KICA8dGV4dCB4PSI1MCIgeT0iNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5APC90ZXh0Pgo8L3N2Zz4=" 
+                     alt="Asia@Connect Logo" 
+                     class="asia-connect-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="brand-circle" style="display: none;"></div>
                 <div class="brand-text">
                     <span class="asia-part">Asi@</span><span class="connect-part">Connect</span>
                 </div>
@@ -401,7 +427,12 @@
             
             <div class="partner-section">
                 <div class="eu-brand">
-                    <div class="eu-flag">
+                    <!-- Try to load the actual EU logo -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwM2Q4MiIvPgogIDxnIGZpbGw9IiNmZmRkMDAiPgogICAgPHBvbHlnb24gcG9pbnRzPSI3NSw5IDgwLDI0IDk2LDI0IDgzLDM0IDg4LDQ5IDc1LDM5IDYyLDQ5IDY3LDM0IDU0LDI0IDcwLDI0Ii8+CiAgICA8cG9seWdvbiBwb2ludHM9Ijk3LDE2IDEwMiwzMSAxMTgsMzEgMTA1LDQxIDExMCw1NiA5Nyw0NiA4NCw1NiA4OSw0MSA3NiwzMSA5MiwzMSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIxMTEsNDAgMTE2LDU1IDEzMiw1NSAxMTksNjUgMTI0LDgwIDExMSw3MCA5OCw4MCAMTAzLDY1IDkwLDU1IDEwNiw1NSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIxMTEsNjAgMTA2LDc1IDkwLDc1IDEwMyw2NSA5OCw1MCA1NCw5MSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI5Nyw4NCA5Miw2OSA3Niw2OSA4OSw1OSA4NCw0NCA3MSw1NCA1OCw0NCA2Myw1OSA1MCw2OSA2Niw2OSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI3NSw5MSA3MCw3NiA1NCw3NiA2Nyw2NiA2Miw1MSA3NSw2MSA4OCw1MSA4Myw2NiA5Niw3NiA4MCw3NiIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI1Myw4NCA1OCw2OSA0Miw2OSA1NSw1OSA1MCw0NCA2Myw1NCA3Niw0NCA3MSw1OSA4NCw2OSA2OCw2OSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIzOSw2MCA0NCw3NSA2MCw3NSA0Nyw2NSA1Miw1MCAzOSw2MCAyNiw1MCAzMSw2NSAxOCw3NSAzNCw3NSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIzOSw0MCAzNCwyNSAxOCwyNSAzMSwzNSAyNiwyMCAzOSwzMCA1MiwyMCA0NywzNSA2MCwyNSA0NCwyNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI1Myw1IDU4LDIwIDc0LDIwIDYxLDMwIDY2LDQ1IDUzLDM1IDQwLDQ1IDQ1LDMwIDMyLDIwIDQ4LDIwIi8+CiAgICA8cG9seWdvbiBwb2ludHM9Ijk3LDE2IDkyLDMxIDEwOCwzMSA5NSw0MSAxMDAsNTYgODcsNDYgNzQsNTYgNzksNDEgNjYsMzEgODIsMzEiLz4KICA8L2c+Cjwvc3ZnPg==" 
+                         alt="European Union Logo" 
+                         class="eu-logo-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="eu-flag" style="display: none;">
                         <div class="eu-stars-container">
                             <div class="eu-star">★</div>
                             <div class="eu-star">★</div>
@@ -421,7 +452,12 @@
                 </div>
                 
                 <div class="tein-brand">
-                    <div class="tein-logo">
+                    <!-- Try to load the actual TEIN logo -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDx0ZXh0IHg9IjEwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzdiMWZhMiI+VEVJTjwvdGV4dD4KICA8dGV4dCB4PSIxMCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzdiMWZhMiIgbGV0dGVyLXNwYWNpbmc9IjJweCI+Q09PUEVSQVRJT04gQ0VOVEVSPC90ZXh0PgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjE1IiByPSI2IiBmaWxsPSIjN2IxZmEyIi8+CiAgPGNpcmNsZSBjeD0iOTAiIGN5PSIyMCIgcj0iNCIgZmlsbD0iI2U5MWU2MyIvPgogIDxjaXJjbGUgY3g9IjEwNSIgY3k9IjI1IiByPSIzIiBmaWxsPSIjZjA2MjkyIi8+CiAgPGNpcmNsZSBjeD0iOTUiIGN5PSIzMCIgcj0iNSIgZmlsbD0iI2FiNDdiYyIvPgogIDxjaXJjbGUgY3g9IjEwOCIgY3k9IjM1IiByPSIyIiBmaWxsPSIjYmE2OGM4Ii8+Cjwvc3ZnPg==" 
+                         alt="TEIN CC Logo" 
+                         class="tein-logo-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="tein-logo" style="display: none;">
                         <div class="tein-splash">
                             <div class="splash-dot dot-1"></div>
                             <div class="splash-dot dot-2"></div>
@@ -429,9 +465,9 @@
                             <div class="splash-dot dot-4"></div>
                             <div class="splash-dot dot-5"></div>
                         </div>
+                        <div class="tein-title">TEIN CC</div>
+                        <div class="tein-subtitle">COOPERATION CENTER</div>
                     </div>
-                    <div class="tein-title">TEIN CC</div>
-                    <div class="tein-subtitle">COOPERATION CENTER</div>
                 </div>
             </div>
         </div>
