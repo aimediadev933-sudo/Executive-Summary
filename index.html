@@ -114,7 +114,7 @@
             position: relative;
             width: 100%;
             height: 500px;
-            background-image: url('https://raw.githubusercontent.com/aimediadev933-sudo/c3wp3pj36/main/images/logos/asia-connect-logo.png');
+            background-image: url('https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/1.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -129,20 +129,22 @@
             border-top: 1px solid #e9ecef;
         }
 
-        .logo {
-            height: 60px;
-        }
-
-        .logo-tein {
-            height: 60px;
+        .logo-eu {
+            height: 80px;
+            max-width: 150px;
+            object-fit: contain;
         }
 
         .logo-asia-connect {
             height: 60px;
+            max-width: 200px;
+            object-fit: contain;
         }
 
-        .logo-eu {
+        .logo-tein {
             height: 60px;
+            max-width: 180px;
+            object-fit: contain;
         }
 
         .page-number {
@@ -207,13 +209,25 @@
         </div>
 
         <div class="footer-logos">
-            <div class="page-number"><br><strong></strong></div>
+            <div class="page-number">Page<br><strong>03</strong></div>
             
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/c3wp3pj36/main/images/logos/eu-logo.png" alt="European Union" class="logo-eu">
+            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/eu-logo.png" 
+                 alt="European Union" 
+                 class="logo-eu"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <div class="logo-fallback eu" style="display: none;">European Union</div>
             
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/c3wp3pj36/main/images/logos/asia-connect-logo.png" alt="Asia@Connect" class="logo-asia-connect">
+            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/asia-connect-logo.png" 
+                 alt="Asia@Connect" 
+                 class="logo-asia-connect"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <div class="logo-fallback asia" style="display: none;">Asia@Connect</div>
             
-            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/c3wp3pj36/main/images/logos/tein-logo.png" alt="TEIN Cooperation Center" class="logo-tein">
+            <img src="https://raw.githubusercontent.com/aimediadev933-sudo/executivesummary/main/images/logos/tein-logo.png" 
+                 alt="TEIN Cooperation Center" 
+                 class="logo-tein"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <div class="logo-fallback tein" style="display: none;">TEIN CC</div>
         </div>
     </div>
 
